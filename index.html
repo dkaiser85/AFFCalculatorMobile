@@ -75,15 +75,27 @@
             color: #6B7D8D;
         }
 
+        /* Normal input styling (unchanged) */
         .input-group input {
             width: 100%;
             padding: 10px;
             font-size: 16px;
-            font-weight: 400; /* Inter Regular */
+            font-weight: 400;
             border: 1px solid #d3d3d3;
             border-radius: 6px;
             outline: none;
             box-sizing: border-box;
+        }
+
+        /* Only applies at 320px or smaller */
+        @media (max-width: 320px) {
+            .input-group input {
+                font-size: 12px;
+            }
+
+            .input-group input::placeholder {
+                font-size: 12px;
+            }
         }
 
         /* Generate Report Button */
